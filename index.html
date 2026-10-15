@@ -1,87 +1,368 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Ótima internet via fibra óptica para ir além velocidade e flexibilidade.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Documento texte</title>
 </head>
 <body>
-    <main>
-        <section>
-            <h1>Lista de Checagem</h1>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container nav">
+            <a href="#" class="logo">
+                <span class="logo-icon">⚡</span>
+                Net<span>Wave</span>
+            </a>
 
-            <form action="">
-                <div>
-                    <input type="checkbox" name="1" id="1">
-                    <label for="1">Conhecimento sólido em lógica de programação e desenvolvimento web back-end (projetos pessoais, acadêmicos ou experiências anteriores);</label>
+            <nav class="menu" id="menu">
+                <a href="#inicio">Início</a>
+                <a href="#planos">Planos</a>
+                <a href="#beneficios">Benefícios</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <a href="#planos" class="btn btn-small">Assine agora</a>
+
+            <button class="menu-button" id="menu-button">☰</button>
+        </div>
+    </header>
+
+    <!-- HERO -->
+     <main>
+        <section class="hero" id="inicio">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="badge">
+                        <span></span>Fibra Óptica Total
+                    </div>
+
+                    <h1>Internet rápida para <strong>conectar sua vida.</strong></h1>
+
+                    <p>Navegue, trabalhe, jogue e assista seus conteúdos favoritos com conexão rápida, estável e sem complicação.</p>
+
+                    <div class="hero-buttons">
+                        <a href="#planos" class="btn">Ver planos<span>→</span></a>
+
+                        <a href="#cobertura" class="btn btn-outline">Consultar cobertura</a>
+                    </div>
+
+                    <div class="hero-info">
+                        <div><strong>1 Giga</strong><span> de velocidade</span></div>
+
+                        <div><strong>24/7</strong><span> suporte online</span></div>
+
+                        <div><strong>100%</strong><span> fibra óptica</span></div>
+                    </div>
                 </div>
 
-                <div>
-                    <input type="checkbox" name="2" id="2">
-                    <label for="2">Conhecimento em Node.js com foco no framework NestJS;</label>
-                </div>
+                <div class="hero-card">
+                    <div class="signal">
+                        <div class="signal-circle"><span>⚡</span></div>
+                    </div>
 
-                <div>
-                    <input type="checkbox" name="3" id="3">
-                    <label for="3">Conhecimento em bancos de dados relacionais (PostgreSQL ou MySQL);</label>
-                </div>
+                    <div class="speed-number">1<span> Gbps</span></div>
 
-                <div>
-                    <input type="checkbox" name="4" id="4">
-                    <label for="4">Familiaridade com Docker para execução de ambientes de desenvolvimento isolados;</label>
-                </div>
+                    <p>Velocidade máxima para sua casa</p>
 
-                <div>
-                    <input type="checkbox" name="5" id="5">
-                    <label for="5">Interesse genuíno em aplicar padrões de projeto (Design Patterns), princípios SOLID e escrever testes automatizados;</label>
-                </div>
+                    <div class="speed-bar"><span></span></div>
 
-                <div>
-                    <input type="checkbox" name="6" id="6">
-                    <label for="6">Entendimento dos fundamentos de arquitetura web: Protocolo HTTP, APIs RESTful;</label>
+                    <div class="speed-footer"><span>DOWNLOAD</span><strong> 1000 Mbps</strong></div>
+                    <div class="speed-footer"><span>UPLOAD</span><strong> 1000 Mbps</strong></div>
                 </div>
-
-                <div>
-                    <input type="checkbox" name="7" id="7">
-                    <label for="7">Boa comunicação interpessoal para interagir com diferentes áreas e clareza para expor dificuldades técnicas;</label>
-                </div>
-
-                <div>
-                    <input type="checkbox" name="8" id="8">
-                    <label for="8">Proatividade e perfil analítico para investigar problemas de forma autônoma antes de escalar.</label>
-                </div>
-
-                <div>
-                    <input type="checkbox" name="9" id="9">
-                    <label for="9">apresente detalhadamente um projeto para apresentar a empresa que passe a mensagem de que o candidato dá conta do serviço para a vaga.</label>
-                </div>
-
-                <button id="atualizar" disabled style="display: none;">Atualizar Contagem</button>
-            </form>
+            </div>
         </section>
-    </main>
 
-    <script>
-        const checksArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
-        
-        let contador = 0;
+        <!-- PLANOS -->
+        <section class="plans section" id="planos">
+            <div class="container">
+                <div class="section-heading">
+                    <span>ESCOLHA SEU PLANO</span>
 
-        checksArray.forEach((check) => {
-            let checkElementValue = document.getElementById(check);
+                    <h2>Internet para todos os momentos</h2>
 
-            if (checkElementValue.checked) {
-                contador++;                
-            }
-        });
-        document.writeln(`<br><br>`);
-        document.writeln(`<p>Concluídos: ${contador}</p>`);
-        document.writeln(`<p>Restam: ${9-contador}</p>`);
+                    <p>Escolha a velocidade ideal para sua casa.</p>
+                </div>
 
-        function atualizar() {
-            location.reload();
-        }
+                <div class="plans-grid">
+                    <!-- PLANO 1 -->
+                     <article class="plan-card">
+                        <div class="plan-icon">🏠</div>
 
-        addEventListener('click', atualizar);
-    </script>
+                        <h3>Essencial</h3>
+
+                        <p class="plan-description">Ideal para navegação e uso diário.</p>
+
+                        <div class="speed"><strong>300</strong><span> MEGAS</span></div>
+
+                        <div class="price"><small>R$</small><strong> 79,90</strong><span> /mês</span></div>
+
+                        <ul>
+                            <li>✓ Fibra óptica</li>
+                            <li>✓ Wi-Fi Incluso</li>
+                            <li>✓ Instalação gratis</li>
+                            <li>✓ Suporte especializado</li>
+                        </ul>
+
+                        <a href="#" class="plan-button">Quero esse plano</a>
+                     </article>
+
+                     <!-- PLANO 2 -->
+                      <article class="plan-card featured">
+                        <div class="popular">MAIS POPULAR</div>
+
+                        <div class="plan-icon">🚀</div>
+
+                        <h3>Família</h3>
+
+                        <p class="plan-description">Perfeito para vários dispositivos.</p>
+
+                        <div class="speed"><strong>500</strong><span> MEGAS</span></div>
+
+                        <div class="price"><small>R$</small><strong> 99,90</strong><span> /mês</span></div>
+
+                        <ul>
+                          <li>✓ Fibra óptica</li>
+                          <li>✓ Wi-Fi de alta performance</li>
+                          <li>✓ Instalação gratis</li>
+                          <li>✓ Suporte prioritário</li>
+                        </ul>
+
+                        <a href="#" class="plan-button">Quero esse plano</a>
+                      </article>
+
+                      <!-- PLANO 3 -->
+                       <article class="plan-card">
+                        <div class="plan-icon">🎮</div>
+
+                        <h3>Ultra</h3>
+
+                        <p class="plan-description">Para quem quer máxima velocidade.</p>
+
+                        <div class="speed"><strong>1</strong><span> GIGA</span></div>
+
+                        <div class="price"><small>R$</small><strong> 129,90</strong><span> /mês</span></div>
+
+                        <ul>
+                          <li>✓ Fibra óptica</li>
+                          <li>✓ Wi-Fi 6</li>
+                          <li>✓ Instalação gratis</li>
+                          <li>✓ Atendimento VIP</li>
+                        </ul>
+
+                        <a href="#" class="plan-button">Quero esse plano</a>
+                       </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- BENEFÍCIOS -->
+         <section class="benefits section" id="beneficios">
+            <div class="container">
+                <div class="section-heading">
+                    <span>POR QUE NETWAVE?</span>
+
+                    <h2>Mais do que internet</h2>
+
+                    <p>Uma conexão feita para acompanhar seu ritmo.</p>
+                </div>
+
+                <div class="benefits-grid">
+                    <div class="benefit">
+                        <div class="benefit-icon">⚡</div>
+
+                        <h3>Alta velocidade</h3>
+
+                        <p>Navegue e baixe arquivos com velocidade de até 1 Giga.</p>
+                    </div>
+
+                    <div class="benefit">
+                        <div class="benefit-icon">📶</div>
+
+                        <h3>Conexão estável</h3>
+
+                        <p>Fibra óptica para você ficar conectado sem interrupções.</p>
+                    </div>
+
+                    <div class="benefit">
+                        <div class="benefit-icon">🎮</div>
+
+                        <h3>Para gamers</h3>
+
+                        <p>Menor latência para partidas online mais competitivas.</p>
+                    </div>
+
+                    <div class="benefit">
+                        <div class="benefit-icon">🛠️</div>
+
+                        <h3>Suporte humano</h3>
+
+                        <p>Atendimento rápido quando você realmente precisar.</p>
+                    </div>
+                </div>
+            </div>
+         </section>
+
+         <!-- COBERTURA -->
+          <section class="coverage section" id="cobertura">
+            <div class="container">
+                <div class="coverage-box">
+                    <div>
+                        <span>CONSULTE AGORA</span>
+
+                        <h2>Temos cobertura na sua região?</h2>
+
+                        <p>Informe seu CEP e descubra os planos disponíveis.</p>
+                    </div>
+
+                    <form id="coverageForm">
+                        <div class="cep-input">
+                            <input type="text" id="cep" placeholder="Digite seu CEP" maxlength="9" required>
+
+                            <button type="submit">Consultar</button>
+                        </div>
+
+                        <div id="coverageResult"></div>
+                    </form>
+                </div>
+            </div>
+          </section>
+
+          <!-- DEPOIMENTOS -->
+           <section class="testemonials section">
+            <div class="container">
+                <div class="section-heading">
+                    <span>QUEM USA, RECOMENDA</span>
+
+                    <h2>Clientes conectados</h2>
+                </div>
+
+                <div class="testimonials-grid">
+                    <article class="testemonial">
+                        <div class="stars">★★★★★</div>
+
+                        <p>"A internet melhorou muito depois que troquei para a NetWave. O suporte também é excelente."</p>
+
+                        <div class="client">
+                            <div class="avatar">JS</div>
+                            <div><strong>João Silva</strong><span> Cliente desde 2023</span></div>
+                        </div>
+                    </article>
+
+                    <article class="testemonial">
+                        <div class="stars">★★★★★</div>
+
+                        <p>"Uso para trabalhar e assistir streaming. Nunca tive problemas com velocidade."</p>
+
+                        <div class="client">
+                            <div class="avatar">AM</div>
+                            <div><strong>Ana Martins</strong><span> Cliente desde 2024</span></div>
+                        </div>
+                    </article>
+
+                    <article class="testemonial">
+                        <div class="stars">★★★★★</div>
+
+                        <p>"Para jogar online ficou muito melhor. A latência é ótima."</p>
+
+                        <div class="client">
+                            <div class="avatar">RC</div>
+                            <div><strong>Rafael Costa</strong><span> Cliente desde 2025</span></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+           </section>
+
+           <!-- FAQ -->
+            <section class="faq section">
+                <div class="container">
+                    <div class="section-heading">
+                        <span>FAQ</span>
+                        <h2>Perguntas frequentes</h2>
+                    </div>
+
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question">A instalação é gratuita?<span>+</span></button>
+
+                            <div class="faq-answer">
+                                <p>Sim. Nos planos participantes, a instalação da fibra óptica é gratuita conforme disponibilidade técnica.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">A internet é realmente fibra óptica?<span>+</span></button>
+
+                            <div class="faq-answer">
+                                <p>Sim. Nossa rede utiliza tecnologia de fibra óptica para oferecer maior estabilidade e velocidade.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">Posso contratar pelo WhatsApp?<span>+</span></button>
+
+                            <div class="faq-answer">
+                                <p>Sim. Nossa equipe pode verificar sua cobertura e ajudar você a escolher o melhor plano.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">Como faço para pagar minha fatura?<span>+</span></button>
+
+                            <div class="faq-answer">
+                                <p>Você poderá acessar sua área do cliente para consultar faturas e realizar pagamentos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+     </main>
+
+     <!-- FOOTER -->
+      <footer id="contato">
+        <div class="container footer-grid">
+            <div>
+                <a href="#" class="logo"><span class="logo-icon">⚡</span>Net<span>Wave</span></a>
+
+                <p>Internet rápida, estável e feita para você.</p>
+            </div>
+
+            <div>
+                <h4>Empresa</h4>
+                <a href="#inicio">Início</a>
+                <a href="#planos">Planos</a>
+                <a href="#beneficios">Benefícios</a>
+                <a href="#faq">FAQ</a>
+            </div>
+
+            <div>
+                <h4>Atendimento</h4>
+                <a href="#">WhatsApp</a>
+                <a href="#">Central de atendimento</a>
+                <a href="#">Área do cliente</a>
+                <a href="#">2ª via da fatura</a>
+            </div>
+
+            <div>
+                <h4>Contato</h4>
+                <p>📱 (91) 99999-9999</p>
+                <p>📧 contato@netwave.com.br</p>
+                <p>📍 Sua cidade - PA</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">© 2026 NetWave. Todos os direitos reservados.</div>
+      </footer>
+
+      <!-- WHATSAPP -->
+       <a href="https://wa.me/5591999999999" class="whatsapp" target="_blank" aria-label="Falar pelo WhatsApp">💬</a>
+
+    <script src="script.js"></script>
 </body>
 </html>
